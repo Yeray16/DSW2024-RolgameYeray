@@ -13,7 +13,6 @@ class PartidaTest extends TestCase
   {
     $partida = new Partida();
     $guerrero = new Guerrero('Conan', 1, 100, 20);
-
     $partida->agregarPersonaje($guerrero);
     $this->assertCount(1, $partida->obtenerPersonajes(), "El número de personajes debe ser 1");
     $this->assertContains($guerrero, $partida->obtenerPersonajes(), "El guerrero creado está en la partida");
